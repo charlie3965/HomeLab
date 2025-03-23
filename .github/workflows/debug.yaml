@@ -1,3 +1,19 @@
 name: CI-Debug
 
 run-name: Debug - ${{github.ref_name || github.ref}}
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - TEST/HomeLab
+
+jobs:
+  ci_debugger:
+    runs-on:
+      - X64
+
+    steps:
+      - name: Template
+        run: |
+          echo "Hello, world!"

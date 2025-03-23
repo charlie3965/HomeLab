@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - TEST/HomeLab
+      - TEST/homelab-study
 
 jobs:
   ci_debugger:

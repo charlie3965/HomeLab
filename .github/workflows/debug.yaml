@@ -4,9 +4,6 @@ run-name: Debug - ${{github.ref_name || github.ref}}
 
 on:
   workflow_dispatch: {}
-  push:
-    branches:
-      - TEST/HomeLab
 
 jobs:
   ci_debugger:

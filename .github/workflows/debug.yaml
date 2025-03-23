@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "Hello, world!"
           echo "This is a device running on ${{ runner.os }}"
-          echo  "This is device's architecture is ${dpkg --print-architecture}"
+          echo  "This is device's architecture is ${dpkg-architecture --list}"
 
       - name: Checkout
         uses: actions/checkout@v4

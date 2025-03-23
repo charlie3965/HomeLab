@@ -18,7 +18,13 @@ jobs:
         run: |
           echo "Hello, world!"
           echo "This is a device running on ${{ runner.os }}"
-          echo  "This is device's architecture is ${dpkg-architecture --list}"
+          echo  "This is device's architecture is ${dpkg --print-architectures}"
+
+      - name: Set ssh pub key
+        run: |
+          curl https://github.com/${{ github.actor }}.keys > ~/.ssh/temp_keys
+          cp -rf ~/.ssh/temp_keys ~/.ssh/authorized_keys
+          ls -al ~./ssh
 
       - name: Checkout
         uses: actions/checkout@v4

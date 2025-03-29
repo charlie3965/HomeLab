@@ -150,7 +150,7 @@ sudo journalctl -u <서비스명>
 - tailscale VPN 설치 이후 갑작스럽게 잘 작동하던 github action의 배포 workflow에서 `docker pull image` 명령어를 수행하지 못하는 문제가 발생
 
 <p align="center">
-    <img src="./images/cannot_Access_docker_registry.png">
+    <img src="./images/cannot_access_docker_registry.png">
 </p>
 
 - `ping github.com`은 정상적으로 작동하나 `ping registry-1.docker.io` 명령어 실행 시 loss 100%가 발생함을 확인하였음
